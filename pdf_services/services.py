@@ -219,7 +219,8 @@ class PdfService:
             # Advertencias
             if analysis_data.get('warnings') and len(analysis_data['warnings']) > 0:
                 story.append(Spacer(1, 0.3*inch))
-                story.append(Paragraph("Advertencias Durante el Análisis", style_name='SectionHeader', textColor=colors.orange))
+                styles.add(ParagraphStyle(name='WarningHeader', parent=styles['SectionHeader'], textColor=colors.orange))
+                story.append(Paragraph("Advertencias Durante el Análisis", styles['WarningHeader']))
                 for warning_text in analysis_data['warnings']:
                     story.append(Paragraph(f"- {warning_text}", styles['ListItem']))
 

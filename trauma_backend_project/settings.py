@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'analysis_api',
-    'pdf_services'
+    'pdf_services',
+    'yolo_stutter_analysis'
 ]
 
 MIDDLEWARE = [
